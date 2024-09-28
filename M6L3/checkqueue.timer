@@ -1,0 +1,12 @@
+[Unit]
+Description=Script to check the SQS Queue every 8 minutes
+
+[Timer]
+# Run every 8 minutes
+# https://unix.stackexchange.com/questions/126786/systemd-timer-every-15-minutes
+# http://www.freedesktop.org/software/systemd/man/systemd.time.html
+OnCalendar=*:0/8
+Persistent=true
+
+[Install]
+WantedBy=timers.target
